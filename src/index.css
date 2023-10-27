@@ -13,6 +13,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --border-radius: 8px;
 }
 
 html,
@@ -32,6 +34,24 @@ body {
 #main-container {
   background: url(assets/landscape-wallpaper.jpg) center center no-repeat;
   background-size: cover;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a09c9c2c;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #eeeaea3d;
 }
 
 a {

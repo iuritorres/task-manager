@@ -3,7 +3,7 @@
   padding: 12px;
 }
 
-#listcontainer-main ol {
+#listcontainer-main > ol {
   list-style: none;
   overflow: auto;
   scroll-behavior: smooth;

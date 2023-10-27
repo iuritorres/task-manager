@@ -1,0 +1,11 @@
+.card {
+  background-color: #363d42;
+  width: 100%;
+  height: 80px;
+  border-radius: var(--border-radius);
+}
+
+.card p {
+  font-size: 1.2rem;
+  text-wrap: wrap;
+}
