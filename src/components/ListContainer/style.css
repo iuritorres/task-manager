@@ -1,0 +1,13 @@
+#listcontainer-main {
+  height: calc(100svh - 50px);
+  padding: 12px;
+}
+
+#listcontainer-main ol {
+  list-style: none;
+  overflow: auto;
+  scroll-behavior: smooth;
+  height: 100%;
+  display: flex;
+  gap: 12px;
+}

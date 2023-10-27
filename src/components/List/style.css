@@ -1,0 +1,12 @@
+.list-container {
+  background-color: #242424;
+  height: 500px;
+  min-width: 240px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.list-container h2 {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
