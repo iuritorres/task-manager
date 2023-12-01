@@ -6,7 +6,12 @@
   padding: 0 20px;
 }
 
-#header-board div *:hover:not(div[class='header-board-options-profiles']) {
+#header-board
+  div
+  *:hover
+  :not(.profile-list)
+  :not(.profile)
+  :not(.image-wrapper) {
   opacity: 0.8;
 }
 

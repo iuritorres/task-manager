@@ -18,16 +18,21 @@ export function ProfileList({ profiles }) {
           const profileZIndex = profilesTotalIndexes - profileIndex
 
           return (
-            <img
-              className="profile"
+            <div
+              className="image-wrapper profile"
               key={`profile-${profile.name}`}
-              alt={`profile-${profile.name}`}
-              src={profile.img}
-              title={profile.name}
               style={{
                 zIndex: profileZIndex,
               }}
-            />
+            >
+              <button
+                className="profile"
+                title={profile.name}
+                style={{
+                  backgroundImage: `url(${profile.img})`,
+                }}
+              ></button>
+            </div>
           )
         })}
 

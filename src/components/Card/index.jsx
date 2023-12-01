@@ -1,55 +1,44 @@
-import { useEffect, useState } from 'react'
-import './style.css'
+import PropTypes from 'prop-types'
 import { ProfileList } from '../ProfileList'
+import './style.css'
+import { useState } from 'react'
 
-export function Card() {
-  const [users, setUsers] = useState([])
+Card.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  usersAttached: PropTypes.array,
+  visible: PropTypes.bool,
+}
 
-  useEffect(() => {
-    const usersList = [
-      {
-        name: 'Iuri Torres',
-        img: '/assets/iuri.jpg',
-      },
-      {
-        name: 'Caique Porto',
-        img: '/assets/caique.png',
-      },
-      {
-        name: 'João Witor',
-        img: '/assets/witor.png',
-      },
-      {
-        name: 'Cauan Veigar',
-        img: '/assets/uber.jpg',
-      },
-      {
-        name: 'Iuri Torres2',
-        img: '/assets/iuri.jpg',
-      },
-      {
-        name: 'Caique Porto3',
-        img: '/assets/caique.png',
-      },
-      {
-        name: 'João Witor4',
-        img: '/assets/witor.png',
-      },
-      {
-        name: 'Cauan Veigar',
-        img: '/assets/uber.jpg',
-      },
-    ]
+export function Card({ id, name, usersAttached, visible }) {
+  const [isVisible, setIsVisible] = useState(visible)
 
-    setUsers(usersList)
-  }, [])
+  const dragStarted = (e, cardId) => {
+    e.dataTransfer.setData('cardId', cardId)
+  }
+
+  const changeCursor = (e) => {
+    e.preventDefault()
+    // e.target.classList.add('grabbing')
+  }
 
   return (
-    <div className="card">
-      <p>Desenvolver o Software - Módulos de Lançamento de Notas</p>
+    <div
+      id={id}
+      className="card"
+      draggable
+      onDrag={(e) => changeCursor(e)}
+      onDragStart={(e) => dragStarted(e, id)}
+    >
+      <p>{name}</p>
 
       <div className="card-container">
-        <span className="material-symbols-outlined">visibility</span>
+        <span
+          className="material-symbols-outlined"
+          onClick={() => setIsVisible(!isVisible)}
+        >
+          {isVisible ? 'visibility' : 'visibility_off'}
+        </span>
 
         <div className="card-container-timer">
           <span className="material-symbols-outlined ">timer</span>
@@ -61,7 +50,7 @@ export function Card() {
       </div>
 
       <div className="card-container-image">
-        <ProfileList profiles={users} />
+        <ProfileList profiles={usersAttached} />
       </div>
     </div>
   )

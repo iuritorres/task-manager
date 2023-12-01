@@ -4,15 +4,27 @@
   gap: 4px;
 }
 
-.profile-list img {
+.image-wrapper {
+  background-color: #454f59;
+  border-radius: 50%;
+}
+
+.image-wrapper > button {
+  background-position: center center;
+  background-size: cover;
   cursor: pointer;
 }
 
-.profile-list img:not(:last-of-type) {
+.image-wrapper > button:hover {
+  opacity: 0.6;
+}
+
+.profile-list .image-wrapper:not(:nth-last-of-type(0)) {
   margin-right: -12px;
 }
 
 .profile-list > p {
   font-size: 1.2rem;
   font-weight: 500;
+  margin-left: 12px;
 }

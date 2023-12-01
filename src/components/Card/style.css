@@ -4,6 +4,10 @@
   height: fit-content;
   border-radius: var(--border-radius);
   padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 4px;
 }
 
 .card > p {
@@ -39,8 +43,8 @@
 
 .card img {
   border-radius: 50%;
-  height: 16px;
-  width: 16px;
+  height: 24px;
+  width: 24px;
 }
 
 .card-container-image {
