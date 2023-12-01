@@ -1,7 +1,5 @@
-import { Header } from "./components/Header"
-import { ListContainer } from "./components/ListContainer"
-
-import "./index.css"
+import { Header } from './components/Header'
+import { ListContainer } from './components/ListContainer'
 
 function App() {
   return (

@@ -8,9 +8,10 @@
 }
 
 .list-container h2 {
-  font-size: 1.4rem;
-  font-weight: normal;
+  font-size: 1.6rem;
+  font-weight: bold;
   margin-bottom: 4px;
+  padding: 0 1rem;
 }
 
 .list-container > ol {

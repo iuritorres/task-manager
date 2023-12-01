@@ -1,6 +1,6 @@
-import { Card } from "../Card"
-import { List } from "../List"
-import "./style.css"
+import { Card } from '../Card'
+import { List } from '../List'
+import './style.css'
 
 export function ListContainer() {
   return (

@@ -1,17 +1,45 @@
 #header-board {
-  /* transparent background */
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
-  padding: 0 14px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+#header-board div *:hover:not(div[class='header-board-options-profiles']) {
+  opacity: 0.8;
 }
 
 #header-board h1 {
   font-size: 1.6rem;
 }
 
+#header-board span {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
 .header-board-data {
   height: 100%;
   display: flex;
   align-items: center;
+  gap: 12px;
+}
+
+.header-board-options {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-board-options button {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  gap: 8px;
+}
+
+.header-board-options button:first-of-type {
+  color: var(--color);
 }
