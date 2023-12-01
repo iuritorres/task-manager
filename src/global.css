@@ -36,8 +36,23 @@ body {
 }
 
 #main-container {
-  background: url(/assets/landscape-wallpaper.jpg) center center no-repeat;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#main-container::before {
+  background-image: url(/assets/landscape-wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
   background-size: cover;
+  content: '';
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  will-change: transform;
+  z-index: -1;
 }
 
 /* scroll bar */
